@@ -1,0 +1,41 @@
+const str = `
+010-1234-5678
+thesecon@gmail.com
+https://www.omdbapi.com/?apikey=7035c60c&s=frozen
+The quick brown fox jumps over the lazy dog.
+abbcccdddd
+hxyp
+http://localhost:1234
+d`
+//ab$
+console.log(
+  str.match(/d$/gm)
+) 
+//^ab
+console.log(
+  str.match(/^t/gim)
+) 
+//.
+console.log(
+  str.match(/h..p/g)
+) 
+//a|b
+console.log(
+  str.match(/fox|dog/)
+) 
+//ab?
+console.log(
+  str.match(/https?/g)
+) 
+//{숫자}
+console.log(
+  str.match(/d{2}/)
+) 
+//{숫자,}
+console.log(
+  str.match(/d{3,}/)
+) 
+//{숫자,숫자}
+console.log(
+  str.match(/\b\w{2,3}\b/g)
+) 
